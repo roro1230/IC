@@ -2,3 +2,6 @@
 __pycache__/
 static/uploads/
 static/outputs/
+*.jpg
+*.jpeg
+*.gif
