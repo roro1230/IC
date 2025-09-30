@@ -1,7 +1,7 @@
 *.png
-__pycache__/
-static/uploads/
-static/outputs/
 *.jpg
 *.jpeg
 *.gif
+__pycache__/
+static/uploads/
+static/outputs/
