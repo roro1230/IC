@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-box {
+    margin: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

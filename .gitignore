@@ -1,0 +1,4 @@
+*.png
+__pycache__/
+static/uploads/
+static/outputs/
