@@ -303,8 +303,8 @@ def upload_image():
     grayscale_path = os.path.join(app.config['OUTPUT_FOLDER'], 'grayscale_' + os.path.basename(image_file.filename))
     grayscale_image.save(grayscale_path)
     
+    # Sửa đổi mô hình thử nghiệm ở đây
     model_name = 'CNN'      
-    # model_name = 'GAN'        # Sửa đổi mô hình thử nghiệm ở đây
     # model_name = 'DCGAN'
     model = models[model_name]  
     model.eval()  
