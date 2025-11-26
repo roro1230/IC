@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask,request, jsonify, send_file
 from PIL import Image
 import torch
 import torchvision.transforms as transforms
@@ -154,7 +154,6 @@ class ColorizationDataset(Dataset):
 MODEL_PATHS = {
     'DCGAN': 'model/DCGAN.pth',
     'CNN': 'model/CNN.pth',
-    'GAN': 'model/GAN.pth'
 }
 
 IMAGE_SIZE = 256
@@ -165,12 +164,12 @@ models = {}
 for model_name, model_path in MODEL_PATHS.items():
     if os.path.exists(model_path) and model_name == 'DCGAN':
         model = DCGenerator()
-        state_dict = torch.load(model_path, map_location=torch.device('cpu'))
+        state_dict = torch.load(model_path, map_location=torch.device('cpu'), weights_only=False)
         model.load_state_dict(state_dict)
         model.eval()
         models[model_name] = model
     elif os.path.exists(model_path) and model_name == 'CNN':
-        model = torch.load('model/CNN.pth')
+        model = torch.load('model/CNN.pth', map_location=torch.device('cpu'), weights_only=False)
         model.to(torch.device('cpu'))
         model.eval()
         models[model_name] = model
