@@ -6,3 +6,7 @@ source .venv/bin/activate
 
 # install deps
 pip install -r requirements.txt
+
+# run local
+python3 app.py
+Ctrl + Click on local url
